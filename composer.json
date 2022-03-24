@@ -27,6 +27,10 @@
     "sort-packages": true,
     "platform": {
       "php": "7.4"
+    },
+    "allow-plugins": {
+      "composer/installers": true,
+      "johnpbloch/wordpress-core-installer": true
     }
   },
   "extra": {
