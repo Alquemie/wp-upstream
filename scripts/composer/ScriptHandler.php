@@ -52,7 +52,8 @@ class ScriptHandler
     $pantheonmu = [
       "autodescription",
       "pantheon-advanced-page-cache",
-      "pantheon"
+      "pantheon",
+      "pantheon.php"
     ];
     $pantheonplugin = [
       "pantheon-hud",
