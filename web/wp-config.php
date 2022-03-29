@@ -23,13 +23,15 @@ if (file_exists( $rootPath . '/domain.php' )) {
 }
 
 $current_domain = $_SERVER['HTTP_HOST'];
+$redirect = false;
 
 /**
  * Pantheon platform settings. Everything you need should already be set.
  */
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) ) {
-	putenv('HOSTING_ENVIRONMENT=' . $_ENV['PANTHEON_ENVIRONMENT']);
-	
+	define('HOSTING_ENVIRONMENT', $_ENV['PANTHEON_ENVIRONMENT']);
+	$redirect = (!isset($_SERVER['HTTP_USER_AGENT_HTTPS']) || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) ? true : false;
+
 	/** The name of the database for WordPress */
 	define('DB_NAME', $_ENV['DB_NAME']);
 	/** MySQL database username */
@@ -63,6 +65,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) ) {
 	$dotenv = Dotenv\Dotenv::create( __DIR__ . '/..' );
 	$dotenv->load();
 
+	$redirect = (!isset($_SERVER['HTTPS']) || strtoupper($_SERVER['HTTPS']) != 'ON' ) ? true : false;
+
 	/** The name of the database for WordPress */
 	define('DB_NAME', $_ENV['DB_NAME']);
 	/** MySQL database username */
@@ -88,7 +92,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) ) {
 	if ( isset($_ENV['WP_TEMP_DIR'])) {
 			define('WP_TEMP_DIR', $_ENV['WP_TEMP_DIR']);
 	}
-	
+
 /**
  * Local configuration information.
  *
@@ -145,9 +149,7 @@ if (isset($_ENV['HOSTING_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   
 }
 
-if ( (php_sapi_name() != 'cli') && ($_SERVER['HTTP_HOST'] != $current_domain
-		|| !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
-		|| $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) ) {
+if ( (php_sapi_name() != 'cli') && ( ($_SERVER['HTTP_HOST'] != $current_domain) || $redirect ) ) {
 
 	# Name transaction "redirect" in New Relic for improved reporting (optional)
 	if (extension_loaded('newrelic')) {
