@@ -61,7 +61,8 @@ class ScriptHandler
     ];
     $muplugins = [
       "stream",
-      "wp-native-php-sessions"
+      "wp-native-php-sessions",
+      "wp-mail-smtp"
     ];
 
     $fs = new Filesystem();
