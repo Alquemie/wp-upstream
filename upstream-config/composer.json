@@ -1,7 +1,7 @@
 {
     "name": "alquemie/upstream-config",
     "type": "project",
-    "version": "1.3.2",
+    "version": "1.3.4",
     "repositories": [
         {
             "type": "composer",
@@ -20,11 +20,9 @@
         "roots/soil": "4.*",
         "roots/wp-password-bcrypt": "^1.0.0",
         "vlucas/phpdotenv": "^3.6.8",
-        "wpackagist-plugin/hyperdb":"1.8",
         "wpackagist-plugin/lh-hsts": "^1.24",
         "wpackagist-plugin/pantheon-advanced-page-cache": ">=0.3.0",
         "wpackagist-plugin/pantheon-hud": "0.3.*",
-        "wpackagist-plugin/post-smtp": "2.*",
         "wpackagist-plugin/stream": "3.*",
         "wpackagist-plugin/wordpress-importer": "0.*",
         "wpackagist-plugin/wp-native-php-sessions": ">=0.6.9",

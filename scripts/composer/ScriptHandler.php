@@ -60,8 +60,6 @@ class ScriptHandler
       "wp-redis"
     ];
     $muplugins = [
-      "hyperdb",
-      "post-smtp",
       "stream",
       "wp-native-php-sessions"
     ];
