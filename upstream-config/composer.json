@@ -29,7 +29,6 @@
         "wpackagist-plugin/wordpress-importer": "0.*",
         "wpackagist-plugin/wp-native-php-sessions": ">=0.6.9",
         "wpackagist-plugin/wp-redis": "1.1.*",
-        "alquemie/alquemie-config": "0.1.*",
         "wp-coding-standards/wpcs": "^1.2.1",
         "wpackagist-theme/twentytwentyone":"1.*"
     },
