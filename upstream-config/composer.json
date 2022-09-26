@@ -1,7 +1,8 @@
 {
     "name": "alquemie/upstream-config",
     "type": "project",
-    "version": "1.4.0",
+    "version": "22.09.26.0",
+    "license": "proprietary",
     "repositories": [
         {
             "type": "composer",
@@ -23,7 +24,6 @@
         "wpackagist-plugin/pantheon-advanced-page-cache": ">=0.3.0",
         "wpackagist-plugin/pantheon-hud": "^0.3",
         "wpackagist-plugin/stream": "^3.9.0",
-        "wpackagist-plugin/wordpress-importer": "^0.7",
         "wpackagist-plugin/wp-native-php-sessions": ">=0.6.9",
         "wpackagist-plugin/wp-redis": "^1.2.0",
         "wpackagist-plugin/fluent-smtp":"^2.2",
