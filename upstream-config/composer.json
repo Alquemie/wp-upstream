@@ -21,6 +21,7 @@
         "roots/soil": "^4.0",
         "roots/wp-password-bcrypt": "^1.0.0",
         "vlucas/phpdotenv": "^5.5",
+        "roots/bedrock-autoloader": "^1.0",
         "wpackagist-plugin/pantheon-advanced-page-cache": "^1.2.0",
         "wpackagist-plugin/stream": "^3.9.0",
         "wpackagist-plugin/wp-native-php-sessions": "^1.3",
